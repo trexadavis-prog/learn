@@ -290,8 +290,32 @@ HTML_CONTENT = """<!DOCTYPE html>
       flex-direction: column;
     }
 
+    .editor-wrapper {
+      display: flex;
+      flex-grow: 1;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .line-numbers {
+      min-width: 48px;
+      width: auto;
+      text-align: right;
+      padding: 24px 12px 24px 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.25);
+      border-right: 1px solid var(--border-color);
+      background: rgba(11, 12, 16, 0.15);
+      user-select: none;
+      overflow-y: hidden;
+      box-sizing: border-box;
+      white-space: pre;
+    }
+
     .editor-textarea {
-      width: 100%;
       flex-grow: 1;
       background: transparent;
       border: none;
@@ -299,10 +323,13 @@ HTML_CONTENT = """<!DOCTYPE html>
       font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
       line-height: 1.6;
-      padding: 24px;
+      padding: 24px 24px 24px 16px;
       resize: none;
       outline: none;
       tab-size: 4;
+      overflow: auto;
+      white-space: pre;
+      box-sizing: border-box;
     }
 
     /* Console Area */

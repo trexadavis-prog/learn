@@ -1,0 +1,341 @@
+{
+ "modules": [
+  {
+   "id": "module_1",
+   "title": "Module 1: Python Basics & Variables",
+   "description": "Learn print statements, comments, variables, and basic data types.",
+   "steps": [
+    {
+     "title": "1. Making Python Speak",
+     "concept": "<p>In Python, we tell the computer to display text using the <code>print()</code> function. Think of it like a megaphone: whatever text you put inside quotes <code>\" \"</code> and parentheses <code>( )</code> will be displayed on the screen.</p>",
+     "demo_code": "print(\"Hello! I am a computer.\")",
+     "instructions": "Click <b>Load Demo Code</b> to load this example into your editor, then click <b>Run Code</b> to run it!"
+    },
+    {
+     "title": "2. Writing Notes (Comments)",
+     "concept": "<p>Comments are notes for humans. Any line that starts with a hash symbol <code>#</code> is completely ignored by Python. They are great for explaining what your code does.</p>",
+     "demo_code": "# This is a comment. Python ignores this!\nprint(\"Python is running this line!\")",
+     "instructions": "Click <b>Load Demo Code</b> and click <b>Run Code</b>. You will see that only the text inside the print function is printed!"
+    },
+    {
+     "title": "3. Variables (Labeled Drawers)",
+     "concept": "<p>A variable is like a labeled storage drawer. You store data in it and name the drawer. To store something, we use the equals <code>=</code> sign (assignment operator).</p><pre><code>label_name = value_to_store</code></pre>",
+     "demo_code": "favorite_animal = \"Panda\"\nprint(favorite_animal)",
+     "instructions": "Load the demo. Change <code>\"Panda\"</code> to your favorite animal's name, then click <b>Run Code</b>."
+    },
+    {
+     "title": "4. Numbers and Decimals (Integers & Floats)",
+     "concept": "<p>Python categorizes numbers into two main types:</p><ul><li><b>Integers (int):</b> Whole numbers (positive, negative, or zero), e.g., <code>10</code>.</li><li><b>Floats (float):</b> Decimal numbers, e.g., <code>1.99</code>.</li></ul><p>You can perform math operations on them directly.</p>",
+     "demo_code": "candies = 10\nprice = 1.99\ntotal_cost = candies * price\nprint(total_cost)",
+     "instructions": "Load the demo. Change <code>candies</code> to <code>5</code> and click <b>Run Code</b> to calculate the new total cost!"
+    },
+    {
+     "title": "5. Text Formatting (F-Strings)",
+     "concept": "<p>An <b>F-string</b> lets you inject variables directly inside text. Put an <code>f</code> right before the opening quotation mark, and write variables inside curly braces <code>{ }</code>.</p>",
+     "demo_code": "name = \"Bob\"\nscore = 95\nprint(f\"{name} scored {score}% on the quiz!\")",
+     "instructions": "Load the demo. Change the name from <code>\"Bob\"</code> to your own name and run the code!"
+    }
+   ],
+   "labs": [
+    {
+     "id": "m1_ex1",
+     "title": "Exercise 1: Labeled Boxes",
+     "instructions": "Create a variable named <code>student_name</code> and set it to <code>\"Alex\"</code>. Then, create a variable named <code>hours_studied</code> and set it to the number <code>4</code>.",
+     "initial_code": "# Write your code below:\nstudent_name = \"\"\nhours_studied = 0\n",
+     "test_code": "import portal_validation\nportal_validation.check_m1_ex1_normal(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of creating variables:\nplayer_name = \"Mario\"\nscore = 150",
+     "help_text": "Try writing exactly this in the editor:\nstudent_name = \"Alex\"\nhours_studied = 4",
+     "instructions_variant": "Create a variable named <code>employee_name</code> and set it to <code>\"Sarah\"</code>. Then, create a variable named <code>years_service</code> and set it to the number <code>5</code>.",
+     "initial_code_variant": "# Write your code below:\nemployee_name = \"\"\nyears_service = 0\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m1_ex1_variant(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of creating variables:\nplayer_name = \"Luigi\"\nscore = 250",
+     "help_text_variant": "Try writing exactly this in the editor:\nemployee_name = \"Sarah\"\nyears_service = 5"
+    },
+    {
+     "id": "m1_ex2",
+     "title": "Exercise 2: Basic Calculations",
+     "instructions": "Create a variable <code>base_salary</code> and set it to <code>1200</code>. Create a variable <code>bonus</code> and set it to <code>350</code>. Finally, create a variable <code>total_pay</code> and set it to the sum of the two variables.",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m1_ex2_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of performing basic math on variables:\nitem_price = 10\ntax = 2\ntotal_price = item_price + tax",
+     "help_text": "Try writing exactly this in the editor:\nbase_salary = 1200\nbonus = 350\ntotal_pay = base_salary + bonus",
+     "instructions_variant": "Create a variable <code>rent</code> and set it to <code>800</code>. Create a variable <code>utilities</code> and set it to <code>150</code>. Finally, create a variable <code>total_expenses</code> and set it to the sum of the two variables.",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m1_ex2_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of adding variables:\nitem_price = 100\nshipping = 15\ntotal_cost = item_price + shipping",
+     "help_text_variant": "Try writing exactly this in the editor:\nrent = 800\nutilities = 150\ntotal_expenses = rent + utilities"
+    },
+    {
+     "id": "m1_ex3",
+     "title": "Exercise 3: String Formatting (F-Strings)",
+     "instructions": "Create a variable <code>city</code> with value <code>\"Paris\"</code> and <code>country</code> with value <code>\"France\"</code>. Then create <code>travel_message</code> using an F-string that evaluates to: <code>\"I want to visit Paris, France.\"</code>",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m1_ex3_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of using F-strings to format text:\nfruit = \"apple\"\ncolor = \"red\"\nmessage = f\"The {fruit} is {color}.\"",
+     "help_text": "Try writing exactly this in the editor:\ncity = \"Paris\"\ncountry = \"France\"\ntravel_message = f\"I want to visit {city}, {country}.\"",
+     "instructions_variant": "Create a variable <code>movie</code> with value <code>\"Toy Story\"</code> and <code>genre</code> with value <code>\"Animation\"</code>. Then create <code>movie_message</code> using an F-string that evaluates to: <code>\"The movie Toy Story is in the Animation genre.\"</code>",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m1_ex3_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of using F-strings:\npet = \"dog\"\nname = \"Buddy\"\nstatus_msg = f\"My pet {pet} is named {name}.\"",
+     "help_text_variant": "Try writing exactly this in the editor:\nmovie = \"Toy Story\"\ngenre = \"Animation\"\nmovie_message = f\"The movie {movie} is in the {genre} genre.\""
+    },
+    {
+     "id": "m1_ex4",
+     "title": "Exercise 4: Slices (Modulo & Division)",
+     "instructions": "Create a variable <code>total_slices</code> set to <code>15</code>. Create <code>slices_per_person</code> and set it to the number of whole slices each of 4 people get (using floor division <code>//</code>). Create <code>leftover_slices</code> and set it to the remainder (using modulo <code>%</code>).",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m1_ex4_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of whole division (floor division) and remainder (modulo):\ntotal_cookies = 10\ncookies_per_child = total_cookies // 3\nremaining_cookies = total_cookies % 3",
+     "help_text": "Try writing exactly this in the editor:\ntotal_slices = 15\nslices_per_person = total_slices // 4\nleftover_slices = total_slices % 4",
+     "instructions_variant": "Create a variable <code>total_candies</code> set to <code>22</code>. Create <code>candies_per_child</code> and set it to the number of whole candies each of 5 children get (using floor division <code>//</code>). Create <code>leftover_candies</code> and set it to the remainder (using modulo <code>%</code>).",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m1_ex4_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of division and modulo:\ntotal_pencils = 17\npencils_per_box = total_pencils // 6\nremaining_pencils = total_pencils % 6",
+     "help_text_variant": "Try writing exactly this in the editor:\ntotal_candies = 22\ncandies_per_child = total_candies // 5\nleftover_candies = total_candies % 5"
+    }
+   ]
+  },
+  {
+   "id": "module_2",
+   "title": "Module 2: Control Flow & Logic",
+   "description": "Learn comparisons, conditional statements, logical operators, and loops.",
+   "steps": [
+    {
+     "title": "1. Comparing Values",
+     "concept": "<p>Comparison operators ask Python a question. The result is always a Boolean: <code>True</code> (yes) or <code>False</code> (no). We use: <code>==</code> (equal to), <code>!=</code> (not equal), <code>&gt;</code> (greater than), and <code>&lt;</code> (less than).</p>",
+     "demo_code": "cookies = 5\nprint(\"Is cookies > 3?\", cookies > 3)\nprint(\"Is cookies equal to 10?\", cookies == 10)",
+     "instructions": "Load the demo code and run it to see how Python evaluates comparison expressions."
+    },
+    {
+     "title": "2. If, Elif, and Else Decisions",
+     "concept": "<p>Use <code>if</code>, <code>elif</code> (else if), and <code>else</code> to make decisions in code. Python runs different blocks based on conditions. Don't forget to **indent** (4 spaces) the lines inside the blocks!</p>",
+     "demo_code": "temperature = 18\nif temperature > 25:\n print(\"Wear a t-shirt!\")\nelif temperature > 10:\n print(\"Wear a sweater!\")\nelse:\n print(\"Wear a heavy coat!\")",
+     "instructions": "Load the demo. Change the <code>temperature</code> variable to <code>5</code> and run it to see Python switch to the coat path."
+    },
+    {
+     "title": "3. Repeating Tasks (For Loops)",
+     "concept": "<p>A <code>for</code> loop repeats a block of code a set number of times. The <code>range(start, end)</code> function generates count numbers from start up to (but not including) end.</p>",
+     "demo_code": "for count in range(1, 4):\n print(f\"This is loop turn {count}\")",
+     "instructions": "Load the demo. Change the range to count from <code>1</code> to <code>6</code> and run the code!"
+    },
+    {
+     "title": "4. Loops with Conditions (While Loops)",
+     "concept": "<p>A <code>while</code> loop runs continuously as long as a condition is <code>True</code>. Ensure you change the variable inside the loop so the condition eventually becomes <code>False</code> and stops, otherwise it will run forever!</p>",
+     "demo_code": "battery = 3\nwhile battery > 0:\n print(f\"Phone active. Battery: {battery}%\")\n battery = battery - 1\nprint(\"Battery dead!\")",
+     "instructions": "Load the demo and run it. Notice how the battery level decreases by 1 in each turn until it stops."
+    }
+   ],
+   "labs": [
+    {
+     "id": "m2_ex1",
+     "title": "Exercise 1: Number Sign Classifier",
+     "instructions": "Create a variable <code>number</code> set to <code>-7.5</code>. Create a variable <code>classification</code> and use an <code>if-elif-else</code> statement to set it to <code>\"positive\"</code>, <code>\"negative\"</code>, or <code>\"zero\"</code> depending on the value of <code>number</code>.",
+     "initial_code": "# Write your code below:\nnumber = -7.5\nclassification = \"\"\n",
+     "test_code": "import portal_validation\nportal_validation.check_m2_ex1_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of an if-elif-else statement:\nscore = 85\nif score >= 90:\n grade = \"A\"\nelif score >= 80:\n grade = \"B\"\nelse:\n grade = \"C\"",
+     "help_text": "Try writing exactly this in the editor:\nnumber = -7.5\nif number > 0:\n classification = \"positive\"\nelif number < 0:\n classification = \"negative\"\nelse:\n classification = \"zero\"",
+     "instructions_variant": "Create a variable <code>score</code> set to <code>85</code>. Create a variable <code>result_status</code> and use an <code>if-elif-else</code> statement to set it to <code>\"pass\"</code> (if score >= 60), <code>\"fail\"</code> (if score < 60), or <code>\"error\"</code> (if score is less than 0 or greater than 100).",
+     "initial_code_variant": "# Write your code below:\nscore = 85\nresult_status = \"\"\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m2_ex1_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of if-elif-else:\ntemp = 25\nif temp > 30:\n feel = \"hot\"\nelif temp > 15:\n feel = \"warm\"\nelse:\n feel = \"cold\"",
+     "help_text_variant": "Try writing exactly this in the editor:\nscore = 85\nif score < 0 or score > 100:\n result_status = \"error\"\nelif score >= 60:\n result_status = \"pass\"\nelse:\n result_status = \"fail\""
+    },
+    {
+     "id": "m2_ex2",
+     "title": "Exercise 2: Multiply by 10 (Loops)",
+     "instructions": "Create an empty list called <code>results</code>. Use a <code>for</code> loop to count from <code>1</code> to <code>10</code>. Inside, multiply the current number by 10 and add (<code>.append()</code>) the result to <code>results</code>.",
+     "initial_code": "# Write your code below:\nresults = []\n",
+     "test_code": "import portal_validation\nportal_validation.check_m2_ex2_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of creating a list and adding items using a loop:\nvalues = []\nfor x in range(1, 5):\n values.append(x * 2)",
+     "help_text": "Try writing exactly this in the editor:\nresults = []\nfor i in range(1, 11):\n results.append(i * 10)",
+     "instructions_variant": "Create an empty list called <code>squares</code>. Use a <code>for</code> loop to count from <code>1</code> to <code>5</code>. Inside, square the current number (multiply it by itself, or use <code>** 2</code>) and add (<code>.append()</code>) the result to <code>squares</code>.",
+     "initial_code_variant": "# Write your code below:\nsquares = []\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m2_ex2_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of building a list with loops:\ndoubles = []\nfor x in range(1, 6):\n doubles.append(x * 2)",
+     "help_text_variant": "Try writing exactly this in the editor:\nsquares = []\nfor i in range(1, 6):\n squares.append(i * i)"
+    },
+    {
+     "id": "m2_ex3",
+     "title": "Exercise 3: Battery Charge (While Loops)",
+     "instructions": "Create variables <code>charge = 0</code> and <code>ticks = 0</code>. Write a <code>while</code> loop that runs while <code>charge &lt; 100</code>. Inside the loop, increase <code>charge</code> by <code>15</code> and <code>ticks</code> by <code>1</code>.",
+     "initial_code": "# Write your code below:\ncharge = 0\nticks = 0\n",
+     "test_code": "import portal_validation\nportal_validation.check_m2_ex3_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of running a loop while a condition is true:\nwater_level = 0\nsteps = 0\nwhile water_level < 50:\n water_level = water_level + 10\n steps = steps + 1",
+     "help_text": "Try writing exactly this in the editor:\ncharge = 0\nticks = 0\nwhile charge < 100:\n charge = charge + 15\n ticks = ticks + 1",
+     "instructions_variant": "Create variables <code>distance = 0</code> and <code>steps = 0</code>. Write a <code>while</code> loop that runs while <code>distance &lt; 80</code>. Inside the loop, increase <code>distance</code> by <code>12</code> and <code>steps</code> by <code>1</code>.",
+     "initial_code_variant": "# Write your code below:\ndistance = 0\nsteps = 0\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m2_ex3_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of while loop count:\nlevel = 0\niterations = 0\nwhile level < 50:\n level = level + 8\n iterations = iterations + 1",
+     "help_text_variant": "Try writing exactly this in the editor:\ndistance = 0\nsteps = 0\nwhile distance < 80:\n distance = distance + 12\n steps = steps + 1"
+    }
+   ]
+  },
+  {
+   "id": "module_3",
+   "title": "Module 3: Data Structures",
+   "description": "Learn Lists, Dictionaries, Tuples, and Sets.",
+   "steps": [
+    {
+     "title": "1. Lists (Ordered Collections)",
+     "concept": "<p>A <b>list</b> is an ordered group of items written inside square brackets <code>[ ]</code>. You retrieve items using an index starting at <code>0</code>. Use negative indexes (like <code>-1</code>) to count from the end.</p>",
+     "demo_code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"First fruit:\", fruits[0])\nprint(\"Last fruit:\", fruits[-1])",
+     "instructions": "Load the demo and run it. Try changing index <code>0</code> to index <code>1</code> to get the banana!"
+    },
+    {
+     "title": "2. Modifying Lists",
+     "concept": "<p>Lists are mutable (changeable). Use <code>.append(item)</code> to add an item to the end, and <code>.remove(item)</code> to remove it by value.</p>",
+     "demo_code": "playlist = [\"Song A\", \"Song B\"]\nplaylist.append(\"Song C\")\nplaylist.remove(\"Song A\")\nprint(playlist)",
+     "instructions": "Load the demo and run it to see the updated playlist."
+    },
+    {
+     "title": "3. Dictionaries (Key-Value Lookups)",
+     "concept": "<p>A <b>dictionary</b> stores key-value pairs inside curly braces <code>{ }</code>. Use a unique key (like a name) to find its value (like a phone number or price).</p>",
+     "demo_code": "prices = {\"apple\": 0.99, \"banana\": 0.59}\nprices[\"orange\"] = 0.79 # Adds orange\nprint(\"An apple costs:\", prices[\"apple\"]) \nprint(prices)",
+     "instructions": "Load the demo. Change the apple price to <code>1.20</code> and run the code."
+    }
+   ],
+   "labs": [
+    {
+     "id": "m3_ex1",
+     "title": "Exercise 1: Shopping List Manager",
+     "instructions": "Create a list <code>shopping_list</code> containing <code>\"apples\"</code>, <code>\"milk\"</code>, and <code>\"bread\"</code>. Add <code>\"eggs\"</code> to the end. Remove <code>\"milk\"</code>. Find the length and store it in <code>list_length</code>.",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m3_ex1_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of list operations:\ncolors = [\"red\", \"blue\"]\ncolors.append(\"green\") # Adds to the end\ncolors.remove(\"red\") # Removes by value\nnum_colors = len(colors) # Finds length",
+     "help_text": "Try writing exactly this in the editor:\nshopping_list = [\"apples\", \"milk\", \"bread\"]\nshopping_list.append(\"eggs\")\nshopping_list.remove(\"milk\")\nlist_length = len(shopping_list)",
+     "instructions_variant": "Create a list <code>todo_list</code> containing <code>\"clean\"</code>, <code>\"study\"</code>, and <code>\"exercise\"</code>. Add <code>\"read\"</code> to the end. Remove <code>\"study\"</code>. Find the length and store it in <code>todo_length</code>.",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m3_ex1_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of list append and remove:\ntags = [\"a\", \"b\"]\ntags.append(\"c\")\ntags.remove(\"b\")\ntags_count = len(tags)",
+     "help_text_variant": "Try writing exactly this in the editor:\ntodo_list = [\"clean\", \"study\", \"exercise\"]\ntodo_list.append(\"read\")\ntodo_list.remove(\"study\")\ntodo_length = len(todo_list)"
+    },
+    {
+     "id": "m3_ex2",
+     "title": "Exercise 2: Inventory Lookup",
+     "instructions": "Create a dictionary <code>inventory</code> with keys: <code>\"apples\"</code> set to <code>12</code>, <code>\"oranges\"</code> set to <code>5</code>, and <code>\"bananas\"</code> set to <code>15</code>. Retrieve the bananas quantity and store it in <code>bananas_qty</code>.",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m3_ex2_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of dictionary lookup:\nphonebook = {\"John\": 5551234, \"Jane\": 5555678}\njane_number = phonebook[\"Jane\"]",
+     "help_text": "Try writing exactly this in the editor:\ninventory = {\"apples\": 12, \"oranges\": 5, \"bananas\": 15}\nbananas_qty = inventory[\"bananas\"]",
+     "instructions_variant": "Create a dictionary <code>prices</code> with keys: <code>\"milk\"</code> set to <code>3.50</code>, <code>\"bread\"</code> set to <code>2.20</code>, and <code>\"cheese\"</code> set to <code>4.80</code>. Retrieve the cheese price and store it in <code>cheese_cost</code>.",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m3_ex2_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of dictionary dictionary lookup:\nscores = {\"Alice\": 90, \"Bob\": 82}\nbob_score = scores[\"Bob\"]",
+     "help_text_variant": "Try writing exactly this in the editor:\nprices = {\"milk\": 3.50, \"bread\": 2.20, \"cheese\": 4.80}\ncheese_cost = prices[\"cheese\"]"
+    },
+    {
+     "id": "m3_ex3",
+     "title": "Exercise 3: Common Colors (Sets)",
+     "instructions": "Alice likes colors <code>[\"blue\", \"green\", \"red\", \"green\"]</code>. Bob likes <code>[\"green\", \"yellow\", \"blue\"]</code>. Convert both lists to sets (<code>alice_set</code> and <code>bob_set</code>), and find their common colors as a set in <code>shared_colors</code> using the intersection <code>.intersection()</code> method.",
+     "initial_code": "# Write your code below:\n\n",
+     "test_code": "import portal_validation\nportal_validation.check_m3_ex3_normal(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of converting lists to sets and finding common items:\nteam_a = set([\"apple\", \"banana\"])\nteam_b = set([\"banana\", \"cherry\"])\ncommon_items = team_a.intersection(team_b)",
+     "help_text": "Try writing exactly this in the editor:\nalice_set = set([\"blue\", \"green\", \"red\", \"green\"])\nbob_set = set([\"green\", \"yellow\", \"blue\"])\nshared_colors = alice_set.intersection(bob_set)",
+     "instructions_variant": "Group A has members <code>[\"cat\", \"dog\", \"bird\", \"dog\"]</code>. Group B has members <code>[\"dog\", \"fish\", \"cat\"]</code>. Convert both lists to sets (<code>set_a</code> and <code>set_b</code>), and find their common members in <code>shared_members</code> using the intersection <code>.intersection()</code> method.",
+     "initial_code_variant": "# Write your code below:\n\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m3_ex3_variant(globals(), portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of finding set intersection:\ns1 = set([1, 2, 3])\ns2 = set([2, 3, 4])\ncommon = s1.intersection(s2)",
+     "help_text_variant": "Try writing exactly this in the editor:\nset_a = set([\"cat\", \"dog\", \"bird\", \"dog\"])\nset_b = set([\"dog\", \"fish\", \"cat\"])\nshared_members = set_a.intersection(set_b)"
+    }
+   ]
+  },
+  {
+   "id": "module_4",
+   "title": "Module 4: Functions & Reusable Code",
+   "description": "Learn parameters, return statements, scope, and libraries.",
+   "steps": [
+    {
+     "title": "1. Writing Custom Functions",
+     "concept": "<p>A function is a reusable block of code. Define it with <code>def function_name(parameter):</code> and use <code>return</code> to send back the output.</p>",
+     "demo_code": "def double_value(number):\n return number * 2\n\nprint(double_value(5))\nprint(double_value(12))",
+     "instructions": "Load the demo and run it. Call the function with <code>double_value(50)</code> and print the output."
+    },
+    {
+     "title": "2. Default Values for Parameters",
+     "concept": "<p>You can give parameters a default fallback value. If the function is called without that input, it will use the default value automatically.</p>",
+     "demo_code": "def greet(name=\"Friend\"):\n return f\"Hello, {name}!\"\n\nprint(greet(\"Alice\"))\nprint(greet()) # Uses the default 'Friend'",
+     "instructions": "Load the demo. Change the default name <code>\"Friend\"</code> to <code>\"Explorer\"</code> and run it."
+    },
+    {
+     "title": "3. Python Modules (Toolboxes)",
+     "concept": "<p>Load built-in Python modules using <code>import</code> to access extra functions. For example: <code>math.sqrt()</code> for square roots or <code>random.randint()</code> for random numbers.</p>",
+     "demo_code": "import math\nimport random\n\nprint(\"Square root of 64 is:\", math.sqrt(64))\nprint(\"Dice roll result:\", random.randint(1, 6))",
+     "instructions": "Load the demo and run it. Click run multiple times to see different random dice rolls!"
+    }
+   ],
+   "labs": [
+    {
+     "id": "m4_ex1",
+     "title": "Exercise 1: Fahrenheit to Celsius",
+     "instructions": "Write a function <code>to_celsius(fahrenheit)</code> that converts temperature using the formula: <code>(fahrenheit - 32) * 5 / 9</code> and returns the Celsius equivalent.",
+     "initial_code": "# Write your code below:\ndef to_celsius(fahrenheit):\n pass\n",
+     "test_code": "import portal_validation\nportal_validation.check_m4_ex1_normal(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of defining a function that returns a calculation:\ndef double_value(x):\n return x * 2",
+     "help_text": "Try writing exactly this in the editor:\ndef to_celsius(fahrenheit):\n return (fahrenheit - 32) * 5 / 9",
+     "instructions_variant": "Write a function <code>inches_to_cm(inches)</code> that converts length using the formula: <code>inches * 2.54</code> and returns the centimeter equivalent.",
+     "initial_code_variant": "# Write your code below:\ndef inches_to_cm(inches):\n pass\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m4_ex1_variant(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example function to double a value:\ndef double(val):\n return val * 2",
+     "help_text_variant": "Try writing exactly this in the editor:\ndef inches_to_cm(inches):\n return inches * 2.54"
+    },
+    {
+     "id": "m4_ex2",
+     "title": "Exercise 2: Power Calculator",
+     "instructions": "Write a function <code>power(base, exponent=2)</code> that returns <code>base</code> raised to the power of <code>exponent</code>.",
+     "initial_code": "# Write your code below:\ndef power(base, exponent=2):\n pass\n",
+     "test_code": "import portal_validation\nportal_validation.check_m4_ex2_normal(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of a function with default argument fallbacks:\ndef greet(name, punctuation=\"!\"):\n return f\"Hello, {name}{punctuation}\"",
+     "help_text": "Try writing exactly this in the editor:\ndef power(base, exponent=2):\n return base ** exponent",
+     "instructions_variant": "Write a function <code>multiply(a, b=5)</code> that returns <code>a</code> multiplied by <code>b</code>.",
+     "initial_code_variant": "# Write your code below:\ndef multiply(a, b=5):\n pass\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m4_ex2_variant(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example function with default argument:\ndef increment(number, step=1):\n return number + step",
+     "help_text_variant": "Try writing exactly this in the editor:\ndef multiply(a, b=5):\n return a * b"
+    },
+    {
+     "id": "m4_ex3",
+     "title": "Exercise 3: Roller Coaster Entry Check",
+     "instructions": "Write a function <code>can_ride(height, age)</code> that returns <code>True</code> if <code>height &gt;= 48</code> AND <code>age &gt;= 8</code>. Otherwise, return <code>False</code>.",
+     "initial_code": "# Write your code below:\ndef can_ride(height, age):\n pass\n",
+     "test_code": "import portal_validation\nportal_validation.check_m4_ex3_normal(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example of logic inside functions:\ndef is_adult(age):\n if age >= 18:\n return True\n else:\n return False",
+     "help_text": "Try writing exactly this in the editor:\ndef can_ride(height, age):\n return height >= 48 and age >= 8",
+     "instructions_variant": "Write a function <code>can_vote(is_registered, age)</code> that returns <code>True</code> if <code>is_registered</code> is <code>True</code> AND <code>age &gt;= 18</code>. Otherwise, return <code>False</code>.",
+     "initial_code_variant": "# Write your code below:\ndef can_vote(is_registered, age):\n pass\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m4_ex3_variant(globals())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example of multiple parameters and and condition:\ndef can_enter(has_ticket, has_membership):\n return has_ticket or has_membership",
+     "help_text_variant": "Try writing exactly this in the editor:\ndef can_vote(is_registered, age):\n return is_registered == True and age >= 18"
+    }
+   ]
+  },
+  {
+   "id": "module_5",
+   "title": "Module 5: Interactive Guessing Game",
+   "description": "Combine your knowledge to build an interactive number guessing game.",
+   "steps": [
+    {
+     "title": "1. Project Brief: Guessing Game",
+     "concept": "<p>You are going to build a High-Low Guessing Game! It will pick a random secret number from 1 to 50, and give the player 6 attempts. In this step, review the blueprint instructions.</p><p>You will use: loops, conditional logic, user inputs, integer type conversion, and import random.</p>",
+     "demo_code": "# Ready to start building your game in the Lab tab?\nprint(\"Click on the Lab tab above to start coding!\")",
+     "instructions": "Read the blueprint explanation on the left, then click on the Lab tab above to build the project."
+    }
+   ],
+   "labs": [
+    {
+     "id": "m5_ex1",
+     "title": "Exercise 1: Build the Guessing Game",
+     "instructions": "Write a full High-Low Guessing Game! The computer chooses a random number from 1 to 50. The player gets 6 attempts. Use <code>input()</code> to read guesses, convert them to integers, decrement attempts, and tell the player if they are too high, too low, or won! (Check the solution tab if you get stuck).",
+     "initial_code": "# High-Low Guessing Game\nimport random\n\nsecret_number = random.randint(1, 50)\nattempts_left = 6\n\nprint(\"I am thinking of a number between 1 and 50!\")\n# Start your loop here...\n",
+     "test_code": "import portal_validation\nportal_validation.check_m5_ex1_normal(portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code": "# Example structure of an interactive console loop:\nimport random\nsecret = random.randint(1, 10)\n\n# Read input and convert to integer\nuser_input = input(\"Guess a number from 1 to 10: \")\nguess = int(user_input)\n\nif guess == secret:\n print(\"Correct!\")\nelse:\n print(f\"Wrong, it was {secret}\")",
+     "help_text": "Try writing exactly this in the editor:\nimport random\nsecret_number = random.randint(1, 50)\nattempts_left = 6\nprint(\"I am thinking of a number between 1 and 50!\")\nwhile attempts_left > 0:\n guess = int(input(\"Take a guess: \"))\n attempts_left = attempts_left - 1\n if guess == secret_number:\n print(\"You won!\")\n break\n elif guess < secret_number:\n print(\"Too low!\")\n else:\n print(\"Too high!\")\nif attempts_left == 0 and guess != secret_number:\n print(f\"Game over. The number was {secret_number}.\")",
+     "instructions_variant": "Write a custom number guessing game where the computer picks a random secret number from <code>1</code> to <code>20</code>, and the player gets <code>4</code> attempts to guess it. Output <code>\"Too low!\"</code>, <code>\"Too high!\"</code>, or <code>\"You won!\"</code>.",
+     "initial_code_variant": "# Variant Guessing Game (1 to 20, 4 attempts)\nimport random\n\nsecret_number = random.randint(1, 20)\nattempts_left = 4\n\nprint(\"Guess a number from 1 to 20!\")\n# Start your loop here...\n",
+     "test_code_variant": "import portal_validation\nportal_validation.check_m5_ex1_variant(portal_validation.get_user_code())\nprint(\"EXERCISE_PASSED\")",
+     "example_code_variant": "# Example structure of an interactive console loop:\nimport random\nsecret = random.randint(1, 5)\nguess = int(input(\"Guess (1-5): \"))\nif guess == secret:\n print(\"Got it!\")\nelse:\n print(\"Miss!\")",
+     "help_text_variant": "Try writing exactly this in the editor:\nimport random\nsecret_number = random.randint(1, 20)\nattempts_left = 4\nprint(\"Guess a number from 1 to 20!\")\nwhile attempts_left > 0:\n guess = int(input(\"Take a guess: \"))\n attempts_left = attempts_left - 1\n if guess == secret_number:\n print(\"You won!\")\n break\n elif guess < secret_number:\n print(\"Too low!\")\n else:\n print(\"Too high!\")"
+    }
+   ]
+  }
+ ]
+}

@@ -288,6 +288,7 @@ HTML_CONTENT = """<!DOCTYPE html>
       background: rgba(30, 30, 36, 0.3);
       display: flex;
       flex-direction: column;
+      min-height: 0;
     }
 
     .editor-wrapper {
@@ -296,6 +297,7 @@ HTML_CONTENT = """<!DOCTYPE html>
       position: relative;
       overflow: hidden;
       height: 100%;
+      min-height: 0;
     }
 
     .line-numbers {
@@ -537,7 +539,10 @@ HTML_CONTENT = """<!DOCTYPE html>
         </div>
 
         <div class="editor-container">
-          <textarea class="editor-textarea" id="editor" spellcheck="false"></textarea>
+          <div class="editor-wrapper">
+            <div class="line-numbers" id="line-numbers">1</div>
+            <textarea class="editor-textarea" id="editor" spellcheck="false"></textarea>
+          </div>
 
           <div class="success-overlay" id="success-overlay">
             <h3>Lab Passed!</h3>
@@ -821,6 +826,8 @@ HTML_CONTENT = """<!DOCTYPE html>
       document.getElementById("console-status").innerText = "idle";
       document.getElementById("console-status").style.color = "var(--accent-blue)";
       saveProgress();
+      updateLineNumbers();
+      syncScroll();
     }
 
     // Render current interactive step details
@@ -869,6 +876,8 @@ HTML_CONTENT = """<!DOCTYPE html>
       const stepCodeKey = `${currentModuleIndex}_lesson_step_${currentStepIndex}`;
       document.getElementById("editor").value = codeCache[stepCodeKey] !== undefined ? codeCache[stepCodeKey] : (step.demo_code || "");
       saveProgress();
+      updateLineNumbers();
+      syncScroll();
     }
 
     function loadDemoCode() {
@@ -878,6 +887,8 @@ HTML_CONTENT = """<!DOCTYPE html>
         document.getElementById("editor").value = step.demo_code;
         document.getElementById("console-output").innerText = "Demo code loaded! Click 'Run Code' to see it execute.";
         saveProgress();
+        updateLineNumbers();
+        syncScroll();
       }
     }
 
@@ -1202,6 +1213,7 @@ ${result.stderr}`;
         const end = this.selectionEnd;
         this.value = this.value.substring(0, start) + " " + this.value.substring(end);
         this.selectionStart = this.selectionEnd = start + 4;
+        updateLineNumbers();
         
         // Save state immediately
         if (currentTabId !== "lesson") {
@@ -1225,7 +1237,31 @@ ${result.stderr}`;
         codeCache[`${currentModuleIndex}_lesson_step_${currentStepIndex}`] = this.value;
       }
       saveProgress();
+      updateLineNumbers();
     });
+
+    function updateLineNumbers() {
+      const editor = document.getElementById("editor");
+      const lineNumbers = document.getElementById("line-numbers");
+      if (!editor || !lineNumbers) return;
+      const lines = editor.value.split("\\n");
+      const lineCount = lines.length;
+      
+      let numbers = [];
+      for (let i = 1; i <= lineCount; i++) {
+        numbers.push(i);
+      }
+      lineNumbers.textContent = numbers.join("\\n");
+    }
+
+    function syncScroll() {
+      const editor = document.getElementById("editor");
+      const lineNumbers = document.getElementById("line-numbers");
+      if (!editor || !lineNumbers) return;
+      lineNumbers.scrollTop = editor.scrollTop;
+    }
+
+    document.getElementById('editor').addEventListener('scroll', syncScroll);
 
     // Initialize App
     fetchCourseData();

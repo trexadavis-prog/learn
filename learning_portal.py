@@ -885,6 +885,8 @@ HTML_CONTENT = """<!DOCTYPE html>
       const step = mod.steps[currentStepIndex];
       if (step.demo_code) {
         document.getElementById("editor").value = step.demo_code;
+        const stepCodeKey = `${currentModuleIndex}_lesson_step_${currentStepIndex}`;
+        codeCache[stepCodeKey] = step.demo_code;
         document.getElementById("console-output").innerText = "Demo code loaded! Click 'Run Code' to see it execute.";
         saveProgress();
         updateLineNumbers();

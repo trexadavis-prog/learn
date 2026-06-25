@@ -177,19 +177,19 @@
    "steps": [
     {
      "title": "1. Lists (Ordered Collections)",
-     "concept": "<p>A <b>list</b> is an ordered group of items written inside square brackets <code>[ ]</code>. You retrieve items using an index starting at <code>0</code>. Use negative indexes (like <code>-1</code>) to count from the end.</p>",
+     "concept": "<p>A <b>list</b> is an ordered, changeable (mutable) collection of items written inside square brackets <code>[ ]</code>. Lists allow us to store multiple values in a single variable. Here is how they work:</p><ul><li><b>Zero-Based Indexing:</b> Python counts positions starting from <code>0</code>. The first item is at index <code>0</code>, the second at <code>1</code>, and so on.</li><li><b>Negative Indexing:</b> You can count backward from the end of the list. Index <code>-1</code> is the last item, <code>-2</code> is the second to last, etc.</li><li><b>Heterogeneous Items:</b> A single list can contain different types of data (strings, integers, floats, and even other lists!).</li></ul>",
      "demo_code": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"First fruit:\", fruits[0])\nprint(\"Last fruit:\", fruits[-1])",
      "instructions": "Load the demo and run it. Try changing index <code>0</code> to index <code>1</code> to get the banana!"
     },
     {
      "title": "2. Modifying Lists",
-     "concept": "<p>Lists are mutable (changeable). Use <code>.append(item)</code> to add an item to the end, and <code>.remove(item)</code> to remove it by value.</p>",
+     "concept": "<p>Lists are <b>mutable</b>, meaning they can be modified after creation. Here are the core methods for altering a list:</p><ul><li><b><code>.append(item)</code>:</b> Adds the specified item to the very end of the list.</li><li><b><code>.remove(item)</code>:</b> Searches for the first occurrence of the specified item in the list and removes it. If the item doesn't exist, it raises an error.</li><li><b><code>len(list_name)</code>:</b> A built-in function that returns the total count of elements inside the list.</li></ul>",
      "demo_code": "playlist = [\"Song A\", \"Song B\"]\nplaylist.append(\"Song C\")\nplaylist.remove(\"Song A\")\nprint(playlist)",
      "instructions": "Load the demo and run it to see the updated playlist."
     },
     {
      "title": "3. Dictionaries (Key-Value Lookups)",
-     "concept": "<p>A <b>dictionary</b> stores key-value pairs inside curly braces <code>{ }</code>. Use a unique key (like a name) to find its value (like a phone number or price).</p>",
+     "concept": "<p>A <b>dictionary</b> (often called a dict) is an unordered, mutable collection of <b>key-value pairs</b> written inside curly braces <code>{ }</code>. It functions like a real-world dictionary or phone directory: you look up a unique word (the <b>key</b>) to find its definition (the <b>value</b>).</p><ul><li><b>Keys and Values:</b> Each pair is structured as <code>key: value</code>. Keys must be unique and immutable (such as strings or numbers), while values can be anything.</li><li><b>Fast Lookups:</b> Retrieving a value using its key (e.g., <code>my_dict[\"key\"]</code>) is extremely fast under the hood because of a technique called hashing.</li><li><b>Adding/Updating:</b> Assigning a value to a key (e.g., <code>my_dict[\"new_key\"] = value</code>) will add the pair if the key is new, or overwrite the existing value if the key already exists.</li></ul>",
      "demo_code": "prices = {\"apple\": 0.99, \"banana\": 0.59}\nprices[\"orange\"] = 0.79 # Adds orange\nprint(\"An apple costs:\", prices[\"apple\"]) \nprint(prices)",
      "instructions": "Load the demo. Change the apple price to <code>1.20</code> and run the code."
     }
